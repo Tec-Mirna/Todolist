@@ -1,42 +1,181 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+
+body {
+	font-family: Poppins;
+	max-width: 1200px;
+	margin: 40px auto;
+	display: flex;
+	justify-content: center;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+/* contenedor */
+.card-to-do {
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	padding: 25px;
+	border-radius: 20px;
+	width: 700px;
+	background-color: #f4f6f6;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* título del form */
+h1 {
+	text-align: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.counter-todos {
+	margin: 40px 0;
+	display: flex;
+	justify-content: space-around;
+	
+}
+/* text de n° de tareas y pendientes */
+.counter-todos h3 {
+	font-weight: 500;
+	
+}
+/* Numero de tareas */
+.counter-todos span {
+	color: #09a129;
+	font-weight: 700;
+	font-size: 24px;
+	margin-left: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+ul {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
 }
 
-.card {
-  padding: 2em;
+ul li {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+ul li span {
+	overflow: hidden;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+ul li form {
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Items de tareas */
+.input-update {
+	border: none;
+	font-weight: 500;
+	font-family: inherit;
+	font-size: 18px;
+	color: #555;
+	width: 100%;
+	/* background-color: #000; */
+	outline: none;
+	
+}
+
+.container-done {
+	background-color: white;
+	width: 24px;
+	height: 24px;
+	border-radius: 20px;
+	border: 2px solid #09a129;
+	cursor: pointer;
+}
+
+.container-done.active {
+	background-color:#09a129;
+}
+
+/* Clase para tachar la tarea que se completa */
+.text-decoration {
+	text-decoration: line-through;
+}
+
+.btn-delete {
+	background-color:#e20e11;
+	color: #fff;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 100%;
+	transition: all 0.3s;
+	cursor: pointer;
+	font-family:initial;
+}
+
+.btn-delete:hover {
+	background-color:#f74649;
+}
+
+.btn-edit {
+	background-color:rgb(253, 216, 8);
+	color: #fff;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 100%;
+	transition: all 0.3s;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.btn-edit:hover {
+	background-color: rgb(239, 209, 38);
+}
+
+form {
+	display: flex;
+	gap: 20px;
+}
+/* Frase de agregar tarea (subtitulo) */
+.add-todo h3 {
+	text-align: center;
+	margin-bottom: 40px;
+	font-size: 24px;
+
+}
+
+/* Input para añadir tarea */
+.input-add {
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+	border-radius: 20px;
+	flex: 1;
+	font-family: inherit;
+	font-size: 17px;
+	color: #555;
+}
+
+/* Boton de agregar */
+.btn-add {
+	border: none;
+	background-color:#09a129;
+	color: #fff;
+	padding: 5px 40px;
+	border-radius: 20px;
+	font-family: inherit;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+.btn-add:hover {
+	background-color:#05cf30;
 }
